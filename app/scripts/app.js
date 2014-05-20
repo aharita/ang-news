@@ -5,8 +5,11 @@ var app = angular.module('angNewsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ]);
+
+app.constant('FIREBASE_URL', 'https://blazing-fire-1307.firebaseIO.com/');
 
 app.config(function ($routeProvider) {
   $routeProvider
