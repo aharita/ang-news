@@ -1,19 +1,20 @@
+/* global app:true */
 'use strict';
 
-angular
-  .module('angNewsApp', [
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+var app = angular.module('angNewsApp', [
+  'ngCookies',
+  'ngResource',
+  'ngSanitize',
+  'ngRoute'
+]);
+
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/posts.html',
+      controller: 'PostsCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
